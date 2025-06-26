@@ -17,8 +17,7 @@ export const fetchImages = async (query, page = 1, perPage = 15) => {
 
   try {
     const response = await axios.get('', { params });
-    const { hits, totalHits } = response.data;
-    return { hits, totalHits };
+    return response;
   } catch (error) {
     throw error;
   }
