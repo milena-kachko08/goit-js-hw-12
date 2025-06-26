@@ -9,7 +9,7 @@ export const fetchImages = async (query, page = 1, perPage = 15) => {
     key: API_KEY,
     q: query,
     image_type: 'photo',
-    orientaiton: 'horizontal',
+    orientation: 'horizontal',
     safesearch: 'true',
     page: page,
     per_page: perPage,
@@ -17,7 +17,8 @@ export const fetchImages = async (query, page = 1, perPage = 15) => {
 
   try {
     const response = await axios.get('', { params });
-    return response;
+    const { hits, totalHits } = response.data;
+    return { hits, totalHits };
   } catch (error) {
     throw error;
   }
