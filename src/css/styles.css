@@ -69,7 +69,7 @@ p {
   width: 48px;
   height: 48px;
   border: 5px solid #fff;
-  border-bottom-color: #4e75ff;
+  border-bottom-color: #333;
   border-radius: 50%;
   display: none;
   box-sizing: border-box;
@@ -138,6 +138,7 @@ p {
 /* Paggination */
 
 .load-more {
+  display: block;
   margin: 0 auto 44px auto;
   width: 125px;
   height: 40px;
